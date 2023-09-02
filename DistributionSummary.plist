@@ -14,11 +14,11 @@
 			<key>certificate</key>
 			<dict>
 				<key>SHA1</key>
-				<string>1D55134E0501933862ABA4D5AA8754F8629C301B</string>
+				<string>6E8DDFCF29D9FF9A18E6634CC0BB9B8578995625</string>
 				<key>dateExpires</key>
-				<string>2/24/24</string>
+				<string>9/10/23</string>
 				<key>type</key>
-				<string>Cloud Managed Apple Distribution</string>
+				<string>Apple Development</string>
 			</dict>
 			<key>entitlements</key>
 			<dict>
@@ -27,18 +27,18 @@
 				<key>com.apple.developer.team-identifier</key>
 				<string>32PZ6J2NBN</string>
 				<key>get-task-allow</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>name</key>
 			<string>UniversityAI.app</string>
 			<key>profile</key>
 			<dict>
 				<key>UUID</key>
-				<string>8ad26f83-a3a5-446a-9543-63de6781b0e1</string>
+				<string>6c348e5a-e28f-4662-aa97-b38491b95e42</string>
 				<key>dateExpires</key>
-				<string>2/24/24</string>
+				<string>3/31/24</string>
 				<key>name</key>
-				<string>iOS Team Ad Hoc Provisioning Profile: com.alsaadza.universityai</string>
+				<string>iOS Team Provisioning Profile: *</string>
 			</dict>
 			<key>team</key>
 			<dict>
