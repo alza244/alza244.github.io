@@ -142,37 +142,40 @@ function speakThis(message) {
     speech.text = "I did not understand what you said please try again";
 
     if(message.includes('hi') || message.includes('hello')) {
-        const finalText = "Hello. How can i help";
+        const finalText = "Hello. How can i help you with calculus?";
         speech.text = finalText;
+        document.getElementById("image").src = "face3.png"; //happy
     }
 
     else if(message.includes('how are you')) {
         const finalText = "I am fine. I think, you also fine";
+        document.getElementById("image").src = "face3.png"; //happy
         speech.text = finalText;
     }
 
-    else if(message.includes('introduce yourself')) {
-        const finalText = "I'm a virtual assistant. My name is car bot but the name will probably be changed soon. I'm developed by zain. I can help you that you want. Still I'm under development.";
+else if(message.includes('derivative' && ('fraction' || 'divided'))) {
+        const finalText = "Ah, I think this is about using the quotient rule.";
+        document.getElementById("image").src = "quotient.png";
         speech.text = finalText;
     }
-
-    else if(message.includes('how old are you')) {
-        const finalText = "As I'm a virtual assistant, I've no age. But, i can say that I've started my journey from 14th april, 2022";
+    
+else if(message.includes('derivative' && ('product' || 'multiplied'))) {
+        const finalText = "Ah, I think this is about using the product rule.";
+        document.getElementById("image").src = "product.png";
         speech.text = finalText;
     }
-
-    else if(message.includes('what are you doing now') || message.includes('what are you doing') || message.includes('what are you doing right now')) {
-        const finalText = "Oh. It's pretty cool. I'm talking with you";
+    
+    
+    else if(message.includes('derivative' && ('itself' || 'constant'))) {
+        const finalText = "Ah, I think this is about the constant rule, in which you just have a number by itself. In this case, the derivative would be zero.";
+        document.getElementById("image").src = "constant.png";
         speech.text = finalText;
     }
-
-    else if(message.includes('what is your name')) {
-        const finalText = "My name is Car Bot";
-        speech.text = finalText;
-    }
-
+    
+    
     else if(message.includes('weather') || message.includes('who developed you') || message.includes('who build you')) {
         const finalText = "Hmm, i'm still under development so i can't say.";
+        document.getElementById("image").src = "face4.png"; //confused
        // window.open("https://github.com/shohan3401", "_blank");
         speech.text = finalText;
     }
@@ -201,6 +204,18 @@ function speakThis(message) {
     else if(message.includes('open google')) {
         window.open("https://google.com", "_blank");
         const finalText = "Opening Google";
+        speech.text = finalText;
+    }
+    
+    else if(message.includes('f***')) {
+        document.getElementById("image").src = "face5.png"; //confused
+        const finalText = "Very funny. You are so original, wow i am bursting out into laughter.";
+        speech.text = finalText;
+    }
+    
+    else if(message.includes('fuck')) {
+        document.getElementById("image").src = "face5.png"; //confused
+        const finalText = "Very funny.";
         speech.text = finalText;
     }
 
