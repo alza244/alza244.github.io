@@ -1,7 +1,7 @@
-@import url("//fonts.googleapis.com/css?family=Roboto:300italic,400italic,700italic,400,300,700");
+@import url("path/font.otf");
 
 html,body{
-    font-family: Roboto, "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family: 'Hiragino Kaku Gothic ProN', "ヒラギノ角ゴ ProN W3", Meiryo, 'MS PGothic', Sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 16px;
@@ -10,7 +10,7 @@ html,body{
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    font-family: 'Hiragino Kaku Gothic ProN', "ヒラギノ角ゴ ProN W3", Meiryo, 'MS PGothic', Sans-serif;
     font-weight: 700;
     font-style: normal;
     line-height: 1.4;
