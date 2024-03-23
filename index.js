@@ -6,6 +6,7 @@ var nextButton = document.getElementById("next-button");
 var difficulty = document.getElementById("difficulty");
 
 var sound = new Audio("submit.wav");
+var sound_hint = new Audio("hint.wav");
 /** The hint value shows up after the user has tried a sequence more than 3 times, if the function assigns a value to it */
 var hint = document.getElementById("hint");
 var answer = document.getElementById("answer");
@@ -159,7 +160,6 @@ displayPattern();
 
 // Checks the users input against the last (hidden) element in the array
 function guess() {
-	sound.play();
     tries++;
     totalTries++;
     document.getElementById("total-tries").innerHTML = totalTries;
@@ -171,6 +171,7 @@ function guess() {
 
     
     if (nextNumber.value == numbers[numbers.length-1]) {
+    	sound.play();
         win++;
         document.getElementById("wins").innerHTML = win;
         result.innerHTML = "You guessed correctly!";
@@ -178,6 +179,13 @@ function guess() {
         hint.innerHTML = "";
         setTimeout(function(){ nextPattern(), nextNumber.value=""}, 1000);
     } else {
+        if (tries != 3 ) {
+        	sound.play();
+        }
+        if (tries == 3 ) {
+        	sound_hint.play();
+            hint.style.display = "block";
+        }
         if (tries >= 3 ) {
             hint.style.display = "block";
         }
@@ -222,6 +230,7 @@ function reveal(){
 
 answer.innerHTML = (numbers[numbers.length-1]);
 answer.style.display = "block";
+sound_hint.play();
 
 }
 
