@@ -1,4 +1,4 @@
-# find-the-formula
+
 Figure out the formula used in a sequence and correctly predict the next number.
 ___
 
